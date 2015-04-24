@@ -1,0 +1,36 @@
+<html>
+<head>
+<script type = 'text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script>
+	function moveup()
+	{ 
+	redball.top=redball.top -10;
+     }
+</script>
+<script>
+	function moveleft()
+	{ 
+	redball.left=redball.left -10;
+     }
+</script>
+<script>
+	function moveright()
+	{ 
+	redball.left=redball.left +10;
+     }
+</script>
+<script>
+	function movedown()
+	{ 
+	redball.top=redball.top +10;
+     }
+</script>
+</head>
+<body>
+<img id='redball' src='http://www.icstars.org/files/redball.jpg'/>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="moveup()")>Move Up</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="moveleft()")>Move Left</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="moveright()")>Move Right</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="movedown()")>Move Down</button>
+</body>
+</html>
