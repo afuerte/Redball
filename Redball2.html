@@ -1,0 +1,90 @@
+<html>
+<head>
+<script type = 'text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script type = 'text/javascript'>
+function sayhelloworld(){
+  alert ('Lets get it.');
+}
+</script>
+
+<script>
+function moveleft()
+	{ 
+	redball.left=redball.left -10;
+	}
+</script>
+<script>
+	function moveright()
+	{ 
+	redball.left=redball.left +10;
+	}
+</script>
+<script>
+	function movedown()
+	{ 
+	redball.top=redball.top +10;
+	}
+</script>
+<script> 
+	function moveup()
+	{ 
+	redball.top=redball.top -10;
+	}
+</script>
+<script>
+function moveupright()
+	{
+	moveup();
+	moveright();
+	}
+</script>
+<script>
+function moveupleft()
+	{
+	moveup();
+	moveleft ();
+	}
+</script>
+<script>
+function movedownright()
+	{
+	movedown ();
+	moveright ();
+	}
+</script>
+<script>
+function movedownleft()
+	{
+	movedown ();
+	moveleft ();
+	}
+</script>
+<script>
+function square ()
+{moveright();moveright();moveright();movedown();movedown();movedown();moveleft();moveleft();moveleft();moveup();moveup();moveup();}
+</script>
+<script>
+function triangle()
+{movedownright();movedownright();movedownright();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveupright();moveupright();moveupright();}
+</script>
+<script>
+function octagon ()
+{moveright();moveright();moveright();moveright();moveright();moveright();movedownright();movedownright();movedownright();movedownright();movedownright();movedownright();movedown();movedown();movedown();movedown();movedown();movedown();movedownleft();movedownleft();movedownleft();movedownleft();movedownleft();movedownleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveupleft();moveupleft();moveupleft();moveupleft();moveupleft();moveupleft();moveup();moveup();moveup();moveup();moveup();moveup();moveupright();moveupright();moveupright();moveupright();moveupright();moveupright();}
+</script>
+</head>
+<body>
+<img id='redball' src='http://www.icstars.org/files/redball.jpg'/>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="moveup()")>Move Up</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="moveleft()")>Move Left</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="moveright()")>Move Right</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="movedown()")>Move Down</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="moveupright()")>Move UpRight</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="moveupleft()")>Move UpLeft</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="movedownright()")>Move DownRight</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="movedownleft()")>Move DownLeft</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="square()")>Square</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="triangle()")>Triangle</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="octagon()")>Octagon</button>
+<button style="color:blue;font-family:Arial;font-size:15px" onclick="sayhelloworld();">Wassup</button>
+</body>
+</html>
