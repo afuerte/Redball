@@ -1,0 +1,53 @@
+<html>
+<head>
+<style>
+#redball{
+position: absolute;
+left: 90px;
+top: 100px;
+}
+</style>
+<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+<script>
+function moveright(){
+  var elem = $("#redball");
+  var pos = elem.offset();
+  pos.left = pos.left + 20;
+  elem.css({ top: pos.top+'px', left: pos.left+'px' });
+}
+function moveleft(){
+  var elem = $("#redball");
+  var pos = elem.offset();
+  pos.left = pos.left - 20;
+  elem.css({ top: pos.top+'px', left: pos.left+'px' });
+}
+function grow(){
+	var elem = $("#mytitle");
+	elem.css("font-size","25px");
+}
+function shrink(){
+	var elem = $("#mytitle");
+	elem.css("font-size","10px");
+}
+function fadeout(){
+	var elem = $("#mytitle");
+	elem.fadeOut();
+}
+function fadein(){
+	var elem = $("#mytitle");
+	elem.fadeIn();
+}
+
+</script>
+</head>
+<body>
+<p id="mytitle">RedBall 5</p>
+<img id='redball' src='http://www.icstars.org/files/redball.jpg'/>
+<button onclick="moveright();">move right</button>
+<button onclick="moveleft();">move left</button>
+<button onclick="grow();">grow</button>
+<button onclick="shrink();">shrink</button>
+<button onclick="fadeout();">fade out</button>
+<button onclick="fadein();">fade in</button>
+</body>
+</html>
