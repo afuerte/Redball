@@ -1,113 +1,58 @@
 <html>
 <head>
+<title> Boundaries </title>
 <link href="redball.css" rel="stylesheet" type="text/css"/>
-
-</style>
 <script type = 'text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script src='jquery.js'></script>
 <script type = 'text/javascript'>
 function sayhelloworld(){
   alert ('Lets get it.');
 }
 </script>
+
 <script>
-function moveleft()
-	{ 
-	redball.left=redball.left -10;
-	}
-</script>
-<script>
-	function moveright()
-	{ 
-	redball.left=redball.left +10;
-	}
-</script>
-<script>
-	function movedown()
-	{ 
-	redball.top=redball.top +10;
-	}
+function moveup() {
+if (redball.top>5){
+redball.top=redball.top -10;
+}
+else {
+alert("DON'T DO IT!")
+}
+}
+function moveright(){
+if (redball.left>1250){
+alert("TOO FAR!")
+}
+else {
+redball.left=redball.left +10;
+}
+} 	
+function moveleft(){
+if (redball.left<2){
+alert("NUH UH!")
+}
+else {
+redball.left=redball.left -10;
+}
+} 	
+function movedown(){
+if (redball.top>520){
+alert("NO TRESPASSING!")
+}
+else {
+redball.top=redball.top +10;
+}
+} 	
 </script>
 <script> 
-	function moveup()
-	{ 
-	redball.top=redball.top -10;
-	}
+function getColor() {
+var url="https://echojsonapi.herokuapp.com/api/color/red"
+$.get(url,function(data){
+var color=data["color"];
+alert(color);
+});
+};
 </script>
-<script>
-function moveupright()
-	{
-	moveup();
-	moveright();
-	}
-</script>
-<script>
-function moveupleft()
-	{
-	moveup();
-	moveleft ();
-	}
-</script>
-<script>
-function movedownright()
-	{
-	movedown ();
-	moveright ();
-	}
-</script>
-<script>
-function movedownleft()
-	{
-	movedown ();
-	moveleft ();
-	}
-</script>
-<script>
-function moveupagain() {
-if (redball.top>5){
-moveup();
-}
-else {
-alert("DON'T DO IT!")
-}
-}
-function moverightagain(){
-if (redball.left>1250){
-alert("NUH UH!")
-}
-else {
-moveright();
-}
-} 	
-function moveleftagain(){
-if (redball.left<0){
-alert("NUH UH!")
-}
-else {
-moveleft();
-}
-} 	
-function movedownagain(){
-if (redball.top>550){
-alert("DON'T DO IT!")
-}
-else {
-movedown();
-}
-} 	
-</script>
-<script>
-function square ()
-{moveright();moveright();moveright();moveright();moveright();moveright();movedown();movedown();movedown();movedown();movedown();movedown();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveup();moveup();moveup();moveup();moveup();moveup();}
-</script>
-<script>
-function triangle()
-{movedownright();movedownright();movedownright();movedownright();movedownright();movedownright();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveupright();moveupright();moveupright();moveupright();moveupright();moveupright();}
-</script>
-<script>
-function octagon ()
-{moveright();moveright();moveright();moveright();moveright();moveright();movedownright();movedownright();movedownright();movedownright();movedownright();movedownright();movedown();movedown();movedown();movedown();movedown();movedown();movedownleft();movedownleft();movedownleft();movedownleft();movedownleft();movedownleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveleft();moveupleft();moveupleft();moveupleft();moveupleft();moveupleft();moveupleft();moveup();moveup();moveup();moveup();moveup();moveup();moveupright();moveupright();moveupright();moveupright();moveupright();moveupright();s}
-</script>
-
 </head>
 <body>
 <img id='redball' src='http://www.icstars.org/files/redball.jpg'/>
@@ -116,18 +61,7 @@ function octagon ()
 <button class="log" style="color:white;font-family:Arial;font-size:18px" onclick="moveleft()")>Move Left</button>
 <button class="log" style="color:white;font-family:Arial;font-size:18px" onclick="moveright()")>Move Right</button>
 <button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="movedown()")>Move Down</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="moveupright()")>Move UpRight</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px" onclick="moveupleft()")>Move UpLeft</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="movedownright()")>Move DownRight</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px" onclick="movedownleft()")>Move DownLeft</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="square()")>Square</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="triangle()")>Triangle</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="octagon()")>Octagon</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px" onclick="sayhelloworld();">Wassup</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px"onclick="moveupagain()">Move Up Again</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px"onclick="moverightagain()">Move Right Again</button>
-<button class="log" style="color:white;font-family:Arial;font-size:18px"onclick="moveleftagain()">Move Left Again</button>
-<button class="log" style="color:blue;font-family:Arial;font-size:18px"onclick="movedownagain()">Move Down Again</button>
+<button class="log" style="color:blue;font-family:Arial;font-size:18px"onclick="getColor()">AJAXTEST</button>
 </div>
 </body>
 </html>
