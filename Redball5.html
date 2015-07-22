@@ -3,8 +3,8 @@
 <style>
 #redball{
 position: absolute;
-left: 90px;
-top: 100px;
+left: 600px;
+top: 250px;
 }
 </style>
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
@@ -22,32 +22,34 @@ function moveleft(){
   elem.css({ top: pos.top+'px', left: pos.left+'px' });
 }
 function grow(){
-	var elem = $("#mytitle");
+	var elem = $("#actions");
 	elem.css("font-size","25px");
 }
 function shrink(){
-	var elem = $("#mytitle");
+	var elem = $("#actions");
 	elem.css("font-size","10px");
 }
-function fadeout(){
-	var elem = $("#mytitle");
+function disappear(){
+	var elem = $("#actions");
 	elem.fadeOut();
 }
-function fadein(){
-	var elem = $("#mytitle");
+function appear(){
+	var elem = $("#actions");
 	elem.fadeIn();
 }
 
 </script>
 </head>
 <body>
-<p id="mytitle">RedBall 5</p>
+<title> Faded/Resizing </title>
+
+<p id="actions">What's Going On?!</p>
 <img id='redball' src='http://www.icstars.org/files/redball.jpg'/>
-<button onclick="moveright();">move right</button>
-<button onclick="moveleft();">move left</button>
-<button onclick="grow();">grow</button>
-<button onclick="shrink();">shrink</button>
-<button onclick="fadeout();">fade out</button>
-<button onclick="fadein();">fade in</button>
+<button class="log" style="color:red;font-family:Arial;font-size:18px" onclick="moveright();">Move Right</button>
+<button class="log" style="color:red;font-family:Arial;font-size:18px" onclick="moveleft();">Move Left</button>
+<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="grow();">Grow Text</button>
+<button class="log" style="color:blue;font-family:Arial;font-size:18px" onclick="shrink();">Shrink Text</button>
+<button class="log" style="color:green;font-family:Arial;font-size:18px" onclick="disappear();">Disappearing Text</button>
+<button class="log" style="color:green;font-family:Arial;font-size:18px" onclick="appear();">Appearing Text</button>
 </body>
 </html>
