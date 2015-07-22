@@ -1,29 +1,62 @@
 <html>
 <head>
 <script type = 'text/javascript' src='http://lrn.icstars.org/redball.js'></script>
+<script type = 'text/javascript'>
+function sayhelloworld(){
+  alert ('Lets get it.');
+}</script>
+
 <script>
-	function moveup()
-	{ 
-	redball.top=redball.top -10;
-     }
-</script>
-<script>
-	function moveleft()
+function moveleft()
 	{ 
 	redball.left=redball.left -10;
-     }
+	}
 </script>
 <script>
 	function moveright()
 	{ 
 	redball.left=redball.left +10;
-     }
+	}
 </script>
 <script>
 	function movedown()
 	{ 
 	redball.top=redball.top +10;
-     }
+	}
+</script>
+<script> 
+	function moveup()
+	{ 
+	redball.top=redball.top -10;
+	}
+</script>
+<script>
+function moveupright()
+	{
+	redball.top=redball.top -10;
+	redball.left=redball.left +10;
+	}
+</script>
+<script>
+function moveupleft()
+	{
+	redball.top=redball.top -10;
+	redball.left=redball.left -10;
+	}
+</script>
+<script>
+function movedownright()
+	{
+	redball.top=redball.top +10;
+	redball.left=redball.left +10;
+	}
+</script>
+<script>
+function movedownleft()
+	{
+	redball.top=redball.top +10;
+	redball.left=redball.left -10;
+	}
 </script>
 </head>
 <body>
@@ -32,5 +65,11 @@
 <button style="color:blue;font-family:Arial;font-size:20px" onclick="moveleft()")>Move Left</button>
 <button style="color:blue;font-family:Arial;font-size:20px" onclick="moveright()")>Move Right</button>
 <button style="color:blue;font-family:Arial;font-size:20px" onclick="movedown()")>Move Down</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="moveupright()")>Move UpRight</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="moveupleft()")>Move UpLeft</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="movedownright()")>Move DownRight</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="movedownleft()")>Move DownLeft</button>
+<button style="color:blue;font-family:Arial;font-size:20px" onclick="sayhelloworld();"HelloWorld</button>
 </body>
 </html>
+ 
